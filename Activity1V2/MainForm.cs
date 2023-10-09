@@ -167,7 +167,7 @@ namespace Activity1V2
 
                     if (!accountActive)
                     {
-                        MessageBox.Show("Wait for the admin to approve your account!", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Wait for the admin to approve your account", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
@@ -370,12 +370,12 @@ namespace Activity1V2
                 {
                     if (a.Number == 1062)
                     {
-                        MessageBox.Show("Username already exist.", "Registration", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Username already exists.", "Registration", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         UsernameTxtBoxCP.Clear();
                     }
                     else
                     {
-                        MessageBox.Show("An error occured", "Registration", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(a.Message, "Registration", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
 

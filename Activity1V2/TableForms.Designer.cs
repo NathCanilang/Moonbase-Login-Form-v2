@@ -76,7 +76,7 @@
             this.ActivateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ActivateBtn.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ActivateBtn.ForeColor = System.Drawing.Color.White;
-            this.ActivateBtn.Location = new System.Drawing.Point(735, 100);
+            this.ActivateBtn.Location = new System.Drawing.Point(756, 100);
             this.ActivateBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ActivateBtn.Name = "ActivateBtn";
             this.ActivateBtn.Size = new System.Drawing.Size(135, 37);
@@ -93,7 +93,7 @@
             this.DeactivateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeactivateBtn.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeactivateBtn.ForeColor = System.Drawing.Color.White;
-            this.DeactivateBtn.Location = new System.Drawing.Point(735, 201);
+            this.DeactivateBtn.Location = new System.Drawing.Point(756, 201);
             this.DeactivateBtn.Margin = new System.Windows.Forms.Padding(2);
             this.DeactivateBtn.Name = "DeactivateBtn";
             this.DeactivateBtn.Size = new System.Drawing.Size(135, 37);
@@ -110,7 +110,7 @@
             this.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteBtn.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteBtn.ForeColor = System.Drawing.Color.White;
-            this.DeleteBtn.Location = new System.Drawing.Point(735, 311);
+            this.DeleteBtn.Location = new System.Drawing.Point(756, 305);
             this.DeleteBtn.Margin = new System.Windows.Forms.Padding(2);
             this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.Size = new System.Drawing.Size(135, 37);
@@ -127,7 +127,7 @@
             this.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackBtn.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackBtn.ForeColor = System.Drawing.Color.White;
-            this.BackBtn.Location = new System.Drawing.Point(735, 410);
+            this.BackBtn.Location = new System.Drawing.Point(756, 410);
             this.BackBtn.Margin = new System.Windows.Forms.Padding(2);
             this.BackBtn.Name = "BackBtn";
             this.BackBtn.Size = new System.Drawing.Size(135, 37);

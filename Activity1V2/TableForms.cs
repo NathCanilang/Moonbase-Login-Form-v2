@@ -48,7 +48,7 @@ namespace Activity1V2
             dataGridView1.Columns["Gender"].Width = 50;
             dataGridView1.Columns["Username"].Width = 150;
             dataGridView1.Columns["Email"].Width = 150; // Set your desired width
-            dataGridView1.Columns["Status"].Width = 130;
+            dataGridView1.Columns["Status"].Width = 129;
 
             dataGridView1.Columns["FullName"].Resizable = DataGridViewTriState.False;
             dataGridView1.Columns["Age"].Resizable = DataGridViewTriState.False;

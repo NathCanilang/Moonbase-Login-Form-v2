@@ -28,6 +28,10 @@ namespace Activity1V2
             adapter.Fill(dataTable);
 
             dataGridView1.DataSource = dataTable;
+
+            AdminLbl.Parent = pictureBox1;
+
+
         }
 
         private void TableForms_Load(object sender, EventArgs e)
@@ -38,11 +42,54 @@ namespace Activity1V2
             dataGridView1.Columns[7].Visible = false;
             dataGridView1.Columns[8].Visible = false;
             refreshTable();
+
+            dataGridView1.Columns["FullName"].Width = 150;
+            dataGridView1.Columns["Age"].Width = 30;
+            dataGridView1.Columns["Gender"].Width = 50;
+            dataGridView1.Columns["Username"].Width = 150;
+            dataGridView1.Columns["Email"].Width = 150; // Set your desired width
+            dataGridView1.Columns["Status"].Width = 130;
+
+            dataGridView1.Columns["FullName"].Resizable = DataGridViewTriState.False;
+            dataGridView1.Columns["Age"].Resizable = DataGridViewTriState.False;
+            dataGridView1.Columns["Gender"].Resizable = DataGridViewTriState.False;
+            dataGridView1.Columns["Username"].Resizable = DataGridViewTriState.False;
+            dataGridView1.Columns["Email"].Resizable = DataGridViewTriState.False;
+            dataGridView1.Columns["Status"].Resizable = DataGridViewTriState.False;
+
         }
 
-        private void BackBtn_Click(object sender, EventArgs e)
+        private void SearchTxtBox_TextChanged(object sender, EventArgs e)
         {
-            this.Hide();
+
+            string searchText = SearchTxtBox.Text.Trim();
+            DataTable filteredTable = FilterTable(searchText);
+            dataGridView1.DataSource = filteredTable;
+        }
+
+        private DataTable FilterTable(string searchText)
+        {
+            string mysqlcon = "server=localhost;user=root;database=moonbasedatabase;password=";
+            conn = new MySqlConnection(mysqlcon);
+
+            using (conn = new MySqlConnection(mysqlcon))
+            {
+                string selectQuery = $"SELECT * FROM mbuserinfo WHERE FullName LIKE '%{searchText}%' OR Username LIKE '%{searchText}%' OR Email LIKE '%{searchText}%' OR Age LIKE '%{searchText}%'  OR Gender LIKE '%{searchText}%' OR Status LIKE '%{searchText}%' ";
+                MySqlDataAdapter adapter = new MySqlDataAdapter(selectQuery, conn);
+                DataTable dataTable = new DataTable();
+
+                try
+                {
+                    conn.Open();
+                    adapter.Fill(dataTable);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+
+                return dataTable;
+            }
         }
 
         private void refreshTable()
@@ -180,6 +227,19 @@ namespace Activity1V2
             {
                 DialogResult choices = MessageBox.Show("No account selected?", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Question);
             }
+
         }
+
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void AdminLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

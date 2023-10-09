@@ -20,6 +20,7 @@ namespace Activity1V2
         public int currentAttempts = 3;
         private bool cooldownActive = false;
 
+
         //CreatePanel essentials
         private string[] genders = { "Male", "Female" };
 
@@ -29,6 +30,8 @@ namespace Activity1V2
         private Timer timer1;
         private Point passwordRecoPanelOriginalLocation;
         private Point resetPassPanelOriginalLocation;
+
+
 
         public MainForm()
         {
@@ -58,11 +61,12 @@ namespace Activity1V2
             PasswordLblCP.Parent = CreatePanelPic;
             EmailLblCP.Parent = CreatePanelPic;
             ShowChckBoxCP.Parent = CreatePanelPic;
+            CreateAccBtn.Parent = CreatePanelPic;
 
             //ForgotPassPanel essentials
             timer1 = new Timer();
             timer1.Interval = 10; // ito yung bilis ng travel, the higher the smoother
-            timer1.Tick += new EventHandler(timer1_Tick);
+            timer1.Tick += new EventHandler(timer1_Tick);        
         }
         //LoginPanel elements and methods only
         private void CreateLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -111,6 +115,8 @@ namespace Activity1V2
                     this.WindowState = FormWindowState.Normal;
                     RememberAccount();
 
+                    UsernameComBox.ResetText();
+                    PasswordTxtBox.Clear();
                     RememberChkBox.CheckState = CheckState.Unchecked;
 
                     return;
@@ -184,6 +190,8 @@ namespace Activity1V2
                             welcomeForms.ShowDialog();
                             this.WindowState = FormWindowState.Normal;
                             loginAttempts = 0;
+                            UsernameComBox.ResetText();
+                            PasswordTxtBox.Clear();
 
                             currentAttempts = 3;
                         }
@@ -243,6 +251,26 @@ namespace Activity1V2
             loginAttempts = 0;
             MessageBox.Show("Cooldown period ended. You can try again now.", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void ShowBtn_Click(object sender, EventArgs e)
+        {
+            if (ShowBtn.Visible == true) // Check if showBtn is visible
+            {
+                ShowBtn.Visible = false;
+                CloseBtn.Visible = true;
+                PasswordTxtBox.PasswordChar = '*'; // Hide password
+            }
+        }
+        private void CloseBtn_Click(object sender, EventArgs e)
+        {
+            if (CloseBtn.Visible == true) // Check if closeBtn is visible
+            {
+                ShowBtn.Visible = true;
+                CloseBtn.Visible = false;
+                PasswordTxtBox.PasswordChar = '\0'; // Show password
+            }
+        }
+
 
         private void RememberAccount()
         {
@@ -397,6 +425,8 @@ namespace Activity1V2
             LoginPanel.Show();
             ForgotPassPanel.Hide();
             CreateAccPanel.Hide();
+            UsernameTxtBoxPR.Clear();
+            EmailTxtBoxPR.Clear();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -404,7 +434,7 @@ namespace Activity1V2
             ResetPanel.Visible = false;
             passwordRecoPanelOriginalLocation = RecoveryPanel.Location;
             resetPassPanelOriginalLocation = ResetPanel.Location;
-    }
+        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -452,6 +482,10 @@ namespace Activity1V2
                             if (result != null)
                             {
                                 MessageBox.Show("You can now proceed with resetting your password.", "Congratulations!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                UsernameTxtBoxPR.Clear();
+                                EmailTxtBoxPR.Clear();
+
                                 timer1.Start();
                                 ResetPanel.Visible = true;
 
@@ -463,6 +497,8 @@ namespace Activity1V2
                             else
                             {
                                 MessageBox.Show("Username and/or email not found.", "Try again", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                UsernameTxtBoxPR.Clear();
+                                EmailTxtBoxPR.Clear();
                             }
                         }
                     }
@@ -592,6 +628,51 @@ namespace Activity1V2
             EmailTxtBoxPR.Enabled = true;
             VerifyBtn.Enabled = true;
             BackBtnPR.Enabled = true;
+        }
+
+        private void LoginPanelPic_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OpenBtnPR1_Click(object sender, EventArgs e)
+        {
+            if (OpenBtnPR1.Visible == true) // Check if showBtn is visible
+            {
+                OpenBtnPR1.Visible = false;
+                CloseBtnPR1.Visible = true;
+                NewPassTxtBoxRP.PasswordChar = '*'; // Hide password
+            }
+        }
+
+        private void CloseBtnPR1_Click(object sender, EventArgs e)
+        {
+            if (CloseBtnPR1.Visible == true) // Check if closeBtn is visible
+            {
+                OpenBtnPR1.Visible = true;
+                CloseBtnPR1.Visible = false;
+                NewPassTxtBoxRP.PasswordChar = '\0'; // Show password
+            }
+        }
+
+        private void OpenBtnPR2_Click(object sender, EventArgs e)
+        {
+            if (OpenBtnPR2.Visible == true) // Check if showBtn is visible
+            {
+                OpenBtnPR2.Visible = false;
+                CloseBtnPR2.Visible = true;
+                ConPassTxtBoxRP.PasswordChar = '*'; // Hide password
+            }
+        }
+
+        private void CloseBtnPR2_Click(object sender, EventArgs e)
+        {
+            if (CloseBtnPR2.Visible == true) // Check if closeBtn is visible
+            {
+                OpenBtnPR2.Visible = true;
+                CloseBtnPR2.Visible = false;
+                ConPassTxtBoxRP.PasswordChar = '\0'; // Show password
+            }
         }
     }
 }

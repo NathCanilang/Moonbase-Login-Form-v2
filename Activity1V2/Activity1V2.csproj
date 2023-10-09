@@ -128,12 +128,6 @@
     <Compile Include="TableForms.Designer.cs">
       <DependentUpon>TableForms.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserForm.Designer.cs">
-      <DependentUpon>UserForm.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="WelcomeForms.resx">
       <DependentUpon>WelcomeForms.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,9 +146,6 @@
     </Compile>
     <EmbeddedResource Include="TableForms.resx">
       <DependentUpon>TableForms.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserForm.resx">
-      <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -178,6 +169,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\TUBA_Greetings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClosePassword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShowPassword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

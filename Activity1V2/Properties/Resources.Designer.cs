@@ -63,9 +63,39 @@ namespace Activity1V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ClosePassword {
+            get {
+                object obj = ResourceManager.GetObject("ClosePassword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Create_Forms_Background {
             get {
                 object obj = ResourceManager.GetObject("Create Forms Background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SearchIcon {
+            get {
+                object obj = ResourceManager.GetObject("SearchIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ShowPassword {
+            get {
+                object obj = ResourceManager.GetObject("ShowPassword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

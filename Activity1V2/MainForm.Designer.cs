@@ -35,6 +35,7 @@
             this.LoginPanelContainer = new System.Windows.Forms.Panel();
             this.HeaderLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CloseBtn = new System.Windows.Forms.PictureBox();
             this.NoAccLbl = new System.Windows.Forms.Label();
             this.ForgotPassLink = new System.Windows.Forms.LinkLabel();
             this.RememberChkBox = new System.Windows.Forms.CheckBox();
@@ -44,6 +45,8 @@
             this.PasswordTxtBox = new System.Windows.Forms.TextBox();
             this.PasswordLbl = new System.Windows.Forms.Label();
             this.UsernameLbl = new System.Windows.Forms.Label();
+            this.ShowBtn = new System.Windows.Forms.PictureBox();
+            this.LoginPanelPic = new System.Windows.Forms.PictureBox();
             this.CreateAccPanel = new System.Windows.Forms.Panel();
             this.NameLbl = new System.Windows.Forms.Label();
             this.ShowChckBoxCP = new System.Windows.Forms.CheckBox();
@@ -60,6 +63,7 @@
             this.NameTxtBox = new System.Windows.Forms.TextBox();
             this.CancelBtn = new System.Windows.Forms.Button();
             this.CreateAccBtn = new System.Windows.Forms.Button();
+            this.CreatePanelPic = new System.Windows.Forms.PictureBox();
             this.ForgotPassPanel = new System.Windows.Forms.Panel();
             this.RecoveryPanel = new System.Windows.Forms.Panel();
             this.PassRecoveryLbl = new System.Windows.Forms.Label();
@@ -73,29 +77,26 @@
             this.ResetPanel = new System.Windows.Forms.Panel();
             this.ResetPassLbl = new System.Windows.Forms.Label();
             this.ResetPassPanel = new System.Windows.Forms.Panel();
-            this.ShowPassCheckBoxRP2 = new System.Windows.Forms.CheckBox();
-            this.ShowPassCheckBoxRP = new System.Windows.Forms.CheckBox();
+            this.OpenBtnPR1 = new System.Windows.Forms.PictureBox();
+            this.CloseBtnPR1 = new System.Windows.Forms.PictureBox();
+            this.OpenBtnPR2 = new System.Windows.Forms.PictureBox();
+            this.CloseBtnPR2 = new System.Windows.Forms.PictureBox();
             this.UpdateBtnRP = new System.Windows.Forms.Button();
             this.NewPassTxtBoxRP = new System.Windows.Forms.TextBox();
             this.ConPassTxtBoxRP = new System.Windows.Forms.TextBox();
             this.NewPassConfirmLblRP = new System.Windows.Forms.Label();
             this.NewPasswordLblRP = new System.Windows.Forms.Label();
             this.BackBtnRP = new System.Windows.Forms.Button();
-            this.OpenBtnPR1 = new System.Windows.Forms.PictureBox();
-            this.CloseBtnPR1 = new System.Windows.Forms.PictureBox();
-            this.OpenBtnPR2 = new System.Windows.Forms.PictureBox();
-            this.CloseBtnPR2 = new System.Windows.Forms.PictureBox();
             this.ForgotPassPanelPic = new System.Windows.Forms.PictureBox();
-            this.CreatePanelPic = new System.Windows.Forms.PictureBox();
-            this.CloseBtn = new System.Windows.Forms.PictureBox();
-            this.ShowBtn = new System.Windows.Forms.PictureBox();
-            this.LoginPanelPic = new System.Windows.Forms.PictureBox();
-
             ((System.ComponentModel.ISupportInitialize)(this.PanelHandler)).BeginInit();
             this.LoginPanel.SuspendLayout();
             this.LoginPanelContainer.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ShowBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoginPanelPic)).BeginInit();
             this.CreateAccPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CreatePanelPic)).BeginInit();
             this.ForgotPassPanel.SuspendLayout();
             this.RecoveryPanel.SuspendLayout();
             this.PassRecoPanel.SuspendLayout();
@@ -106,10 +107,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.OpenBtnPR2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseBtnPR2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ForgotPassPanelPic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CreatePanelPic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ShowBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LoginPanelPic)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelHandler
@@ -125,11 +122,11 @@
             this.LoginPanel.Controls.Add(this.LoginPanelContainer);
             this.LoginPanel.Controls.Add(this.LoginPanelPic);
             this.LoginPanel.Location = new System.Drawing.Point(0, 0);
-            this.LoginPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.LoginPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelHandler.SetMinimumSize(this.LoginPanel, new System.Drawing.Size(200, 100));
             this.LoginPanel.Name = "LoginPanel";
             this.PanelHandler.SetPreferredSize(this.LoginPanel, new System.Drawing.Size(200, 100));
-            this.LoginPanel.Size = new System.Drawing.Size(908, 453);
+            this.LoginPanel.Size = new System.Drawing.Size(1211, 558);
             this.LoginPanel.TabIndex = 0;
             // 
             // LoginPanelContainer
@@ -137,20 +134,19 @@
             this.LoginPanelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(73)))), ((int)(((byte)(96)))));
             this.LoginPanelContainer.Controls.Add(this.HeaderLabel);
             this.LoginPanelContainer.Controls.Add(this.panel1);
-            this.LoginPanelContainer.Location = new System.Drawing.Point(219, 33);
-            this.LoginPanelContainer.Margin = new System.Windows.Forms.Padding(2);
+            this.LoginPanelContainer.Location = new System.Drawing.Point(292, 41);
+            this.LoginPanelContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LoginPanelContainer.Name = "LoginPanelContainer";
-            this.LoginPanelContainer.Size = new System.Drawing.Size(470, 376);
+            this.LoginPanelContainer.Size = new System.Drawing.Size(627, 463);
             this.LoginPanelContainer.TabIndex = 1;
             // 
             // HeaderLabel
             // 
             this.HeaderLabel.Font = new System.Drawing.Font("Space Age", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HeaderLabel.ForeColor = System.Drawing.Color.White;
-            this.HeaderLabel.Location = new System.Drawing.Point(7, 6);
-            this.HeaderLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.HeaderLabel.Location = new System.Drawing.Point(9, 7);
             this.HeaderLabel.Name = "HeaderLabel";
-            this.HeaderLabel.Size = new System.Drawing.Size(463, 64);
+            this.HeaderLabel.Size = new System.Drawing.Size(617, 79);
             this.HeaderLabel.TabIndex = 1;
             this.HeaderLabel.Text = "M O O N B A S E";
             this.HeaderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -169,20 +165,32 @@
             this.panel1.Controls.Add(this.PasswordLbl);
             this.panel1.Controls.Add(this.UsernameLbl);
             this.panel1.Controls.Add(this.ShowBtn);
-            this.panel1.Location = new System.Drawing.Point(2, 72);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(3, 89);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(465, 301);
+            this.panel1.Size = new System.Drawing.Size(620, 370);
             this.panel1.TabIndex = 0;
+            // 
+            // CloseBtn
+            // 
+            this.CloseBtn.ErrorImage = global::Activity1V2.Properties.Resources.ClosePassword;
+            this.CloseBtn.Image = global::Activity1V2.Properties.Resources.ClosePassword;
+            this.CloseBtn.Location = new System.Drawing.Point(505, 144);
+            this.CloseBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CloseBtn.Name = "CloseBtn";
+            this.CloseBtn.Size = new System.Drawing.Size(40, 31);
+            this.CloseBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.CloseBtn.TabIndex = 10;
+            this.CloseBtn.TabStop = false;
+            this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
             // 
             // NoAccLbl
             // 
             this.NoAccLbl.AutoSize = true;
             this.NoAccLbl.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NoAccLbl.Location = new System.Drawing.Point(98, 262);
-            this.NoAccLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.NoAccLbl.Location = new System.Drawing.Point(131, 322);
             this.NoAccLbl.Name = "NoAccLbl";
-            this.NoAccLbl.Size = new System.Drawing.Size(119, 19);
+            this.NoAccLbl.Size = new System.Drawing.Size(146, 24);
             this.NoAccLbl.TabIndex = 9;
             this.NoAccLbl.Text = "No Account?";
             // 
@@ -190,10 +198,9 @@
             // 
             this.ForgotPassLink.AutoSize = true;
             this.ForgotPassLink.Font = new System.Drawing.Font("Nasalization Rg", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForgotPassLink.Location = new System.Drawing.Point(244, 147);
-            this.ForgotPassLink.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ForgotPassLink.Location = new System.Drawing.Point(325, 181);
             this.ForgotPassLink.Name = "ForgotPassLink";
-            this.ForgotPassLink.Size = new System.Drawing.Size(134, 15);
+            this.ForgotPassLink.Size = new System.Drawing.Size(173, 20);
             this.ForgotPassLink.TabIndex = 8;
             this.ForgotPassLink.TabStop = true;
             this.ForgotPassLink.Text = "Forgot Password?";
@@ -203,10 +210,10 @@
             // 
             this.RememberChkBox.AutoSize = true;
             this.RememberChkBox.Font = new System.Drawing.Font("Nasalization Rg", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RememberChkBox.Location = new System.Drawing.Point(86, 146);
-            this.RememberChkBox.Margin = new System.Windows.Forms.Padding(2);
+            this.RememberChkBox.Location = new System.Drawing.Point(115, 180);
+            this.RememberChkBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RememberChkBox.Name = "RememberChkBox";
-            this.RememberChkBox.Size = new System.Drawing.Size(124, 19);
+            this.RememberChkBox.Size = new System.Drawing.Size(165, 24);
             this.RememberChkBox.TabIndex = 7;
             this.RememberChkBox.Text = "Remember me";
             this.RememberChkBox.UseVisualStyleBackColor = true;
@@ -215,10 +222,9 @@
             // 
             this.CreateLink.AutoSize = true;
             this.CreateLink.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CreateLink.Location = new System.Drawing.Point(246, 261);
-            this.CreateLink.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.CreateLink.Location = new System.Drawing.Point(328, 321);
             this.CreateLink.Name = "CreateLink";
-            this.CreateLink.Size = new System.Drawing.Size(120, 19);
+            this.CreateLink.Size = new System.Drawing.Size(151, 24);
             this.CreateLink.TabIndex = 6;
             this.CreateLink.TabStop = true;
             this.CreateLink.Text = "Sign Up Here!";
@@ -231,10 +237,10 @@
             this.LoginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoginBtn.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginBtn.ForeColor = System.Drawing.Color.White;
-            this.LoginBtn.Location = new System.Drawing.Point(120, 201);
-            this.LoginBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.LoginBtn.Location = new System.Drawing.Point(160, 247);
+            this.LoginBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LoginBtn.Name = "LoginBtn";
-            this.LoginBtn.Size = new System.Drawing.Size(225, 36);
+            this.LoginBtn.Size = new System.Drawing.Size(300, 44);
             this.LoginBtn.TabIndex = 5;
             this.LoginBtn.Text = "LOGIN";
             this.LoginBtn.UseVisualStyleBackColor = false;
@@ -244,31 +250,30 @@
             // 
             this.UsernameComBox.Font = new System.Drawing.Font("Nasalization Rg", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameComBox.FormattingEnabled = true;
-            this.UsernameComBox.Location = new System.Drawing.Point(86, 52);
-            this.UsernameComBox.Margin = new System.Windows.Forms.Padding(2);
+            this.UsernameComBox.Location = new System.Drawing.Point(115, 64);
+            this.UsernameComBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.UsernameComBox.Name = "UsernameComBox";
-            this.UsernameComBox.Size = new System.Drawing.Size(292, 26);
+            this.UsernameComBox.Size = new System.Drawing.Size(388, 31);
             this.UsernameComBox.TabIndex = 4;
             // 
             // PasswordTxtBox
             // 
             this.PasswordTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PasswordTxtBox.Font = new System.Drawing.Font("Nasalization Rg", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordTxtBox.Location = new System.Drawing.Point(86, 117);
-            this.PasswordTxtBox.Margin = new System.Windows.Forms.Padding(2);
+            this.PasswordTxtBox.Location = new System.Drawing.Point(115, 144);
+            this.PasswordTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PasswordTxtBox.Name = "PasswordTxtBox";
             this.PasswordTxtBox.PasswordChar = '*';
-            this.PasswordTxtBox.Size = new System.Drawing.Size(292, 25);
+            this.PasswordTxtBox.Size = new System.Drawing.Size(389, 30);
             this.PasswordTxtBox.TabIndex = 3;
             // 
             // PasswordLbl
             // 
             this.PasswordLbl.AutoSize = true;
             this.PasswordLbl.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordLbl.Location = new System.Drawing.Point(73, 85);
-            this.PasswordLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PasswordLbl.Location = new System.Drawing.Point(97, 105);
             this.PasswordLbl.Name = "PasswordLbl";
-            this.PasswordLbl.Size = new System.Drawing.Size(93, 19);
+            this.PasswordLbl.Size = new System.Drawing.Size(116, 24);
             this.PasswordLbl.TabIndex = 2;
             this.PasswordLbl.Text = "Password";
             // 
@@ -276,12 +281,38 @@
             // 
             this.UsernameLbl.AutoSize = true;
             this.UsernameLbl.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameLbl.Location = new System.Drawing.Point(73, 22);
-            this.UsernameLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.UsernameLbl.Location = new System.Drawing.Point(97, 27);
             this.UsernameLbl.Name = "UsernameLbl";
-            this.UsernameLbl.Size = new System.Drawing.Size(96, 19);
+            this.UsernameLbl.Size = new System.Drawing.Size(120, 24);
             this.UsernameLbl.TabIndex = 1;
             this.UsernameLbl.Text = "Username";
+            // 
+            // ShowBtn
+            // 
+            this.ShowBtn.ErrorImage = global::Activity1V2.Properties.Resources.ClosePassword;
+            this.ShowBtn.Image = global::Activity1V2.Properties.Resources.ShowPassword;
+            this.ShowBtn.Location = new System.Drawing.Point(505, 144);
+            this.ShowBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ShowBtn.Name = "ShowBtn";
+            this.ShowBtn.Size = new System.Drawing.Size(40, 31);
+            this.ShowBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ShowBtn.TabIndex = 11;
+            this.ShowBtn.TabStop = false;
+            this.ShowBtn.Visible = false;
+            this.ShowBtn.Click += new System.EventHandler(this.ShowBtn_Click);
+            // 
+            // LoginPanelPic
+            // 
+            this.LoginPanelPic.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LoginPanelPic.Image = global::Activity1V2.Properties.Resources.TUBA_OuterSpace;
+            this.LoginPanelPic.Location = new System.Drawing.Point(0, 0);
+            this.LoginPanelPic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.LoginPanelPic.Name = "LoginPanelPic";
+            this.LoginPanelPic.Size = new System.Drawing.Size(1211, 558);
+            this.LoginPanelPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.LoginPanelPic.TabIndex = 0;
+            this.LoginPanelPic.TabStop = false;
+            this.LoginPanelPic.Click += new System.EventHandler(this.LoginPanelPic_Click);
             // 
             // CreateAccPanel
             // 
@@ -304,11 +335,11 @@
             this.CreateAccPanel.Controls.Add(this.CreateAccBtn);
             this.CreateAccPanel.Controls.Add(this.CreatePanelPic);
             this.CreateAccPanel.Location = new System.Drawing.Point(0, 0);
-            this.CreateAccPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.CreateAccPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelHandler.SetMinimumSize(this.CreateAccPanel, new System.Drawing.Size(200, 100));
             this.CreateAccPanel.Name = "CreateAccPanel";
             this.PanelHandler.SetPreferredSize(this.CreateAccPanel, new System.Drawing.Size(200, 100));
-            this.CreateAccPanel.Size = new System.Drawing.Size(908, 453);
+            this.CreateAccPanel.Size = new System.Drawing.Size(1211, 558);
             this.CreateAccPanel.TabIndex = 1;
             // 
             // NameLbl
@@ -316,9 +347,10 @@
             this.NameLbl.AutoSize = true;
             this.NameLbl.BackColor = System.Drawing.Color.Transparent;
             this.NameLbl.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameLbl.Location = new System.Drawing.Point(530, 55);
+            this.NameLbl.Location = new System.Drawing.Point(707, 68);
+            this.NameLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NameLbl.Name = "NameLbl";
-            this.NameLbl.Size = new System.Drawing.Size(95, 19);
+            this.NameLbl.Size = new System.Drawing.Size(117, 24);
             this.NameLbl.TabIndex = 9;
             this.NameLbl.Text = "Full Name";
             // 
@@ -327,9 +359,10 @@
             this.ShowChckBoxCP.AutoSize = true;
             this.ShowChckBoxCP.BackColor = System.Drawing.Color.Transparent;
             this.ShowChckBoxCP.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShowChckBoxCP.Location = new System.Drawing.Point(533, 281);
+            this.ShowChckBoxCP.Location = new System.Drawing.Point(711, 346);
+            this.ShowChckBoxCP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ShowChckBoxCP.Name = "ShowChckBoxCP";
-            this.ShowChckBoxCP.Size = new System.Drawing.Size(165, 23);
+            this.ShowChckBoxCP.Size = new System.Drawing.Size(203, 28);
             this.ShowChckBoxCP.TabIndex = 15;
             this.ShowChckBoxCP.Text = "Show Password";
             this.ShowChckBoxCP.UseVisualStyleBackColor = false;
@@ -340,9 +373,10 @@
             this.EmailLblCP.AutoSize = true;
             this.EmailLblCP.BackColor = System.Drawing.Color.Transparent;
             this.EmailLblCP.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailLblCP.Location = new System.Drawing.Point(530, 311);
+            this.EmailLblCP.Location = new System.Drawing.Point(707, 383);
+            this.EmailLblCP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EmailLblCP.Name = "EmailLblCP";
-            this.EmailLblCP.Size = new System.Drawing.Size(56, 19);
+            this.EmailLblCP.Size = new System.Drawing.Size(68, 24);
             this.EmailLblCP.TabIndex = 14;
             this.EmailLblCP.Text = "Email";
             // 
@@ -351,9 +385,10 @@
             this.PasswordLblCP.AutoSize = true;
             this.PasswordLblCP.BackColor = System.Drawing.Color.Transparent;
             this.PasswordLblCP.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordLblCP.Location = new System.Drawing.Point(530, 229);
+            this.PasswordLblCP.Location = new System.Drawing.Point(707, 282);
+            this.PasswordLblCP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PasswordLblCP.Name = "PasswordLblCP";
-            this.PasswordLblCP.Size = new System.Drawing.Size(93, 19);
+            this.PasswordLblCP.Size = new System.Drawing.Size(116, 24);
             this.PasswordLblCP.TabIndex = 13;
             this.PasswordLblCP.Text = "Password";
             // 
@@ -362,9 +397,10 @@
             this.UsernameLblCP.AutoSize = true;
             this.UsernameLblCP.BackColor = System.Drawing.Color.Transparent;
             this.UsernameLblCP.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameLblCP.Location = new System.Drawing.Point(530, 173);
+            this.UsernameLblCP.Location = new System.Drawing.Point(707, 213);
+            this.UsernameLblCP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.UsernameLblCP.Name = "UsernameLblCP";
-            this.UsernameLblCP.Size = new System.Drawing.Size(96, 19);
+            this.UsernameLblCP.Size = new System.Drawing.Size(120, 24);
             this.UsernameLblCP.TabIndex = 12;
             this.UsernameLblCP.Text = "Username";
             // 
@@ -373,9 +409,10 @@
             this.GenderLbl.AutoSize = true;
             this.GenderLbl.BackColor = System.Drawing.Color.Transparent;
             this.GenderLbl.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GenderLbl.Location = new System.Drawing.Point(678, 116);
+            this.GenderLbl.Location = new System.Drawing.Point(904, 143);
+            this.GenderLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.GenderLbl.Name = "GenderLbl";
-            this.GenderLbl.Size = new System.Drawing.Size(70, 19);
+            this.GenderLbl.Size = new System.Drawing.Size(88, 24);
             this.GenderLbl.TabIndex = 11;
             this.GenderLbl.Text = "Gender";
             // 
@@ -384,43 +421,48 @@
             this.AgeLbl.AutoSize = true;
             this.AgeLbl.BackColor = System.Drawing.Color.Transparent;
             this.AgeLbl.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AgeLbl.Location = new System.Drawing.Point(530, 116);
+            this.AgeLbl.Location = new System.Drawing.Point(707, 143);
+            this.AgeLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.AgeLbl.Name = "AgeLbl";
-            this.AgeLbl.Size = new System.Drawing.Size(43, 19);
+            this.AgeLbl.Size = new System.Drawing.Size(52, 24);
             this.AgeLbl.TabIndex = 10;
             this.AgeLbl.Text = "Age";
             // 
             // EmailTxtBoxCP
             // 
             this.EmailTxtBoxCP.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailTxtBoxCP.Location = new System.Drawing.Point(533, 333);
+            this.EmailTxtBoxCP.Location = new System.Drawing.Point(711, 410);
+            this.EmailTxtBoxCP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.EmailTxtBoxCP.Name = "EmailTxtBoxCP";
-            this.EmailTxtBoxCP.Size = new System.Drawing.Size(281, 27);
+            this.EmailTxtBoxCP.Size = new System.Drawing.Size(373, 31);
             this.EmailTxtBoxCP.TabIndex = 8;
             // 
             // PasswordTxtBoxCP
             // 
             this.PasswordTxtBoxCP.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordTxtBoxCP.Location = new System.Drawing.Point(533, 252);
+            this.PasswordTxtBoxCP.Location = new System.Drawing.Point(711, 310);
+            this.PasswordTxtBoxCP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PasswordTxtBoxCP.Name = "PasswordTxtBoxCP";
             this.PasswordTxtBoxCP.PasswordChar = '*';
-            this.PasswordTxtBoxCP.Size = new System.Drawing.Size(281, 27);
+            this.PasswordTxtBoxCP.Size = new System.Drawing.Size(373, 31);
             this.PasswordTxtBoxCP.TabIndex = 7;
             // 
             // UsernameTxtBoxCP
             // 
             this.UsernameTxtBoxCP.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameTxtBoxCP.Location = new System.Drawing.Point(533, 196);
+            this.UsernameTxtBoxCP.Location = new System.Drawing.Point(711, 241);
+            this.UsernameTxtBoxCP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.UsernameTxtBoxCP.Name = "UsernameTxtBoxCP";
-            this.UsernameTxtBoxCP.Size = new System.Drawing.Size(281, 27);
+            this.UsernameTxtBoxCP.Size = new System.Drawing.Size(373, 31);
             this.UsernameTxtBoxCP.TabIndex = 6;
             // 
             // AgeTxtBox
             // 
             this.AgeTxtBox.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AgeTxtBox.Location = new System.Drawing.Point(533, 139);
+            this.AgeTxtBox.Location = new System.Drawing.Point(711, 171);
+            this.AgeTxtBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AgeTxtBox.Name = "AgeTxtBox";
-            this.AgeTxtBox.Size = new System.Drawing.Size(133, 27);
+            this.AgeTxtBox.Size = new System.Drawing.Size(176, 31);
             this.AgeTxtBox.TabIndex = 5;
             this.AgeTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AgeTxtBox_KeyPress);
             // 
@@ -428,18 +470,20 @@
             // 
             this.GenderComBox.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GenderComBox.FormattingEnabled = true;
-            this.GenderComBox.Location = new System.Drawing.Point(681, 139);
+            this.GenderComBox.Location = new System.Drawing.Point(908, 171);
+            this.GenderComBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.GenderComBox.Name = "GenderComBox";
-            this.GenderComBox.Size = new System.Drawing.Size(133, 27);
+            this.GenderComBox.Size = new System.Drawing.Size(176, 32);
             this.GenderComBox.TabIndex = 4;
             this.GenderComBox.SelectedIndexChanged += new System.EventHandler(this.GenderComBox_SelectedIndexChanged);
             // 
             // NameTxtBox
             // 
             this.NameTxtBox.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameTxtBox.Location = new System.Drawing.Point(533, 78);
+            this.NameTxtBox.Location = new System.Drawing.Point(711, 96);
+            this.NameTxtBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.NameTxtBox.Name = "NameTxtBox";
-            this.NameTxtBox.Size = new System.Drawing.Size(281, 27);
+            this.NameTxtBox.Size = new System.Drawing.Size(373, 31);
             this.NameTxtBox.TabIndex = 3;
             this.NameTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NameTxtBox_KeyPress);
             // 
@@ -451,9 +495,10 @@
             this.CancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CancelBtn.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelBtn.ForeColor = System.Drawing.Color.White;
-            this.CancelBtn.Location = new System.Drawing.Point(681, 365);
+            this.CancelBtn.Location = new System.Drawing.Point(908, 449);
+            this.CancelBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CancelBtn.Name = "CancelBtn";
-            this.CancelBtn.Size = new System.Drawing.Size(133, 30);
+            this.CancelBtn.Size = new System.Drawing.Size(177, 37);
             this.CancelBtn.TabIndex = 2;
             this.CancelBtn.Text = "Cancel";
             this.CancelBtn.UseVisualStyleBackColor = false;
@@ -467,13 +512,26 @@
             this.CreateAccBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CreateAccBtn.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateAccBtn.ForeColor = System.Drawing.Color.White;
-            this.CreateAccBtn.Location = new System.Drawing.Point(533, 365);
+            this.CreateAccBtn.Location = new System.Drawing.Point(711, 449);
+            this.CreateAccBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CreateAccBtn.Name = "CreateAccBtn";
-            this.CreateAccBtn.Size = new System.Drawing.Size(133, 30);
+            this.CreateAccBtn.Size = new System.Drawing.Size(177, 37);
             this.CreateAccBtn.TabIndex = 1;
             this.CreateAccBtn.Text = "Create Account";
             this.CreateAccBtn.UseVisualStyleBackColor = false;
             this.CreateAccBtn.Click += new System.EventHandler(this.CreateAccBtn_Click);
+            // 
+            // CreatePanelPic
+            // 
+            this.CreatePanelPic.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CreatePanelPic.Image = global::Activity1V2.Properties.Resources.Create_Forms_Background;
+            this.CreatePanelPic.Location = new System.Drawing.Point(0, 0);
+            this.CreatePanelPic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CreatePanelPic.Name = "CreatePanelPic";
+            this.CreatePanelPic.Size = new System.Drawing.Size(1211, 558);
+            this.CreatePanelPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.CreatePanelPic.TabIndex = 0;
+            this.CreatePanelPic.TabStop = false;
             // 
             // ForgotPassPanel
             // 
@@ -483,11 +541,11 @@
             this.ForgotPassPanel.Controls.Add(this.ResetPanel);
             this.ForgotPassPanel.Controls.Add(this.ForgotPassPanelPic);
             this.ForgotPassPanel.Location = new System.Drawing.Point(0, 0);
-            this.ForgotPassPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.ForgotPassPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelHandler.SetMinimumSize(this.ForgotPassPanel, new System.Drawing.Size(200, 100));
             this.ForgotPassPanel.Name = "ForgotPassPanel";
             this.PanelHandler.SetPreferredSize(this.ForgotPassPanel, new System.Drawing.Size(200, 100));
-            this.ForgotPassPanel.Size = new System.Drawing.Size(908, 453);
+            this.ForgotPassPanel.Size = new System.Drawing.Size(1211, 558);
             this.ForgotPassPanel.TabIndex = 2;
             // 
             // RecoveryPanel
@@ -495,20 +553,19 @@
             this.RecoveryPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(73)))), ((int)(((byte)(96)))));
             this.RecoveryPanel.Controls.Add(this.PassRecoveryLbl);
             this.RecoveryPanel.Controls.Add(this.PassRecoPanel);
-            this.RecoveryPanel.Location = new System.Drawing.Point(290, 44);
-            this.RecoveryPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.RecoveryPanel.Location = new System.Drawing.Point(387, 54);
+            this.RecoveryPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RecoveryPanel.Name = "RecoveryPanel";
-            this.RecoveryPanel.Size = new System.Drawing.Size(328, 362);
+            this.RecoveryPanel.Size = new System.Drawing.Size(437, 446);
             this.RecoveryPanel.TabIndex = 1;
             // 
             // PassRecoveryLbl
             // 
             this.PassRecoveryLbl.Font = new System.Drawing.Font("Space Age", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PassRecoveryLbl.ForeColor = System.Drawing.Color.White;
-            this.PassRecoveryLbl.Location = new System.Drawing.Point(11, 2);
-            this.PassRecoveryLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PassRecoveryLbl.Location = new System.Drawing.Point(15, 2);
             this.PassRecoveryLbl.Name = "PassRecoveryLbl";
-            this.PassRecoveryLbl.Size = new System.Drawing.Size(307, 64);
+            this.PassRecoveryLbl.Size = new System.Drawing.Size(409, 79);
             this.PassRecoveryLbl.TabIndex = 1;
             this.PassRecoveryLbl.Text = "Password Recovery";
             this.PassRecoveryLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -522,10 +579,10 @@
             this.PassRecoPanel.Controls.Add(this.UsernameTxtBoxPR);
             this.PassRecoPanel.Controls.Add(this.EmailLblPR);
             this.PassRecoPanel.Controls.Add(this.UsernameLblPR);
-            this.PassRecoPanel.Location = new System.Drawing.Point(2, 65);
-            this.PassRecoPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.PassRecoPanel.Location = new System.Drawing.Point(3, 80);
+            this.PassRecoPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PassRecoPanel.Name = "PassRecoPanel";
-            this.PassRecoPanel.Size = new System.Drawing.Size(324, 295);
+            this.PassRecoPanel.Size = new System.Drawing.Size(432, 363);
             this.PassRecoPanel.TabIndex = 0;
             // 
             // BackBtnPR
@@ -535,10 +592,10 @@
             this.BackBtnPR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackBtnPR.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackBtnPR.ForeColor = System.Drawing.Color.White;
-            this.BackBtnPR.Location = new System.Drawing.Point(166, 219);
-            this.BackBtnPR.Margin = new System.Windows.Forms.Padding(2);
+            this.BackBtnPR.Location = new System.Drawing.Point(221, 270);
+            this.BackBtnPR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BackBtnPR.Name = "BackBtnPR";
-            this.BackBtnPR.Size = new System.Drawing.Size(86, 33);
+            this.BackBtnPR.Size = new System.Drawing.Size(115, 41);
             this.BackBtnPR.TabIndex = 3;
             this.BackBtnPR.Text = "Back";
             this.BackBtnPR.UseVisualStyleBackColor = false;
@@ -551,10 +608,10 @@
             this.VerifyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.VerifyBtn.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VerifyBtn.ForeColor = System.Drawing.Color.White;
-            this.VerifyBtn.Location = new System.Drawing.Point(58, 219);
-            this.VerifyBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.VerifyBtn.Location = new System.Drawing.Point(77, 270);
+            this.VerifyBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.VerifyBtn.Name = "VerifyBtn";
-            this.VerifyBtn.Size = new System.Drawing.Size(86, 34);
+            this.VerifyBtn.Size = new System.Drawing.Size(115, 42);
             this.VerifyBtn.TabIndex = 4;
             this.VerifyBtn.Text = "Verify";
             this.VerifyBtn.UseVisualStyleBackColor = false;
@@ -564,41 +621,39 @@
             // 
             this.EmailTxtBoxPR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.EmailTxtBoxPR.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailTxtBoxPR.Location = new System.Drawing.Point(77, 148);
-            this.EmailTxtBoxPR.Margin = new System.Windows.Forms.Padding(2);
+            this.EmailTxtBoxPR.Location = new System.Drawing.Point(103, 182);
+            this.EmailTxtBoxPR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EmailTxtBoxPR.Multiline = true;
             this.EmailTxtBoxPR.Name = "EmailTxtBoxPR";
-            this.EmailTxtBoxPR.Size = new System.Drawing.Size(171, 27);
+            this.EmailTxtBoxPR.Size = new System.Drawing.Size(227, 33);
             this.EmailTxtBoxPR.TabIndex = 3;
             // 
             // UsernameTxtBoxPR
             // 
             this.UsernameTxtBoxPR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.UsernameTxtBoxPR.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameTxtBoxPR.Location = new System.Drawing.Point(77, 63);
-            this.UsernameTxtBoxPR.Margin = new System.Windows.Forms.Padding(2);
+            this.UsernameTxtBoxPR.Location = new System.Drawing.Point(103, 78);
+            this.UsernameTxtBoxPR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.UsernameTxtBoxPR.Multiline = true;
             this.UsernameTxtBoxPR.Name = "UsernameTxtBoxPR";
-            this.UsernameTxtBoxPR.Size = new System.Drawing.Size(171, 27);
+            this.UsernameTxtBoxPR.Size = new System.Drawing.Size(227, 33);
             this.UsernameTxtBoxPR.TabIndex = 2;
             // 
             // EmailLblPR
             // 
             this.EmailLblPR.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailLblPR.Location = new System.Drawing.Point(41, 118);
-            this.EmailLblPR.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.EmailLblPR.Location = new System.Drawing.Point(55, 145);
             this.EmailLblPR.Name = "EmailLblPR";
-            this.EmailLblPR.Size = new System.Drawing.Size(67, 28);
+            this.EmailLblPR.Size = new System.Drawing.Size(89, 34);
             this.EmailLblPR.TabIndex = 1;
             this.EmailLblPR.Text = "E-mail";
             // 
             // UsernameLblPR
             // 
             this.UsernameLblPR.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameLblPR.Location = new System.Drawing.Point(41, 37);
-            this.UsernameLblPR.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.UsernameLblPR.Location = new System.Drawing.Point(55, 46);
             this.UsernameLblPR.Name = "UsernameLblPR";
-            this.UsernameLblPR.Size = new System.Drawing.Size(98, 24);
+            this.UsernameLblPR.Size = new System.Drawing.Size(131, 30);
             this.UsernameLblPR.TabIndex = 0;
             this.UsernameLblPR.Text = "Username";
             // 
@@ -607,20 +662,19 @@
             this.ResetPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(73)))), ((int)(((byte)(96)))));
             this.ResetPanel.Controls.Add(this.ResetPassLbl);
             this.ResetPanel.Controls.Add(this.ResetPassPanel);
-            this.ResetPanel.Location = new System.Drawing.Point(290, 46);
-            this.ResetPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.ResetPanel.Location = new System.Drawing.Point(387, 57);
+            this.ResetPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ResetPanel.Name = "ResetPanel";
-            this.ResetPanel.Size = new System.Drawing.Size(328, 362);
+            this.ResetPanel.Size = new System.Drawing.Size(437, 446);
             this.ResetPanel.TabIndex = 2;
             // 
             // ResetPassLbl
             // 
             this.ResetPassLbl.Font = new System.Drawing.Font("Space Age", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ResetPassLbl.ForeColor = System.Drawing.Color.White;
-            this.ResetPassLbl.Location = new System.Drawing.Point(7, 1);
-            this.ResetPassLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ResetPassLbl.Location = new System.Drawing.Point(9, 1);
             this.ResetPassLbl.Name = "ResetPassLbl";
-            this.ResetPassLbl.Size = new System.Drawing.Size(314, 62);
+            this.ResetPassLbl.Size = new System.Drawing.Size(419, 76);
             this.ResetPassLbl.TabIndex = 1;
             this.ResetPassLbl.Text = "Password Reset";
             this.ResetPassLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -638,119 +692,20 @@
             this.ResetPassPanel.Controls.Add(this.NewPassConfirmLblRP);
             this.ResetPassPanel.Controls.Add(this.NewPasswordLblRP);
             this.ResetPassPanel.Controls.Add(this.BackBtnRP);
-            this.ResetPassPanel.Location = new System.Drawing.Point(2, 65);
-            this.ResetPassPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.ResetPassPanel.Location = new System.Drawing.Point(3, 80);
+            this.ResetPassPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ResetPassPanel.Name = "ResetPassPanel";
-            this.ResetPassPanel.Size = new System.Drawing.Size(324, 295);
+            this.ResetPassPanel.Size = new System.Drawing.Size(432, 363);
             this.ResetPassPanel.TabIndex = 0;
-            // 
-            // ShowPassCheckBoxRP2
-            // 
-            this.ShowPassCheckBoxRP2.AutoSize = true;
-            this.ShowPassCheckBoxRP2.Location = new System.Drawing.Point(109, 221);
-            this.ShowPassCheckBoxRP2.Name = "ShowPassCheckBoxRP2";
-            this.ShowPassCheckBoxRP2.Size = new System.Drawing.Size(125, 20);
-            this.ShowPassCheckBoxRP2.TabIndex = 12;
-            this.ShowPassCheckBoxRP2.Text = "Show Password";
-            this.ShowPassCheckBoxRP2.UseVisualStyleBackColor = true;
-            this.ShowPassCheckBoxRP2.CheckedChanged += new System.EventHandler(this.ShowPassCheckBoxRP2_CheckedChanged);
-            // 
-            // ShowPassCheckBoxRP
-            // 
-            this.ShowPassCheckBoxRP.AutoSize = true;
-            this.ShowPassCheckBoxRP.Location = new System.Drawing.Point(109, 117);
-            this.ShowPassCheckBoxRP.Name = "ShowPassCheckBoxRP";
-            this.ShowPassCheckBoxRP.Size = new System.Drawing.Size(125, 20);
-            this.ShowPassCheckBoxRP.TabIndex = 11;
-            this.ShowPassCheckBoxRP.Text = "Show Password";
-            this.ShowPassCheckBoxRP.UseVisualStyleBackColor = true;
-            this.ShowPassCheckBoxRP.CheckedChanged += new System.EventHandler(this.ShowPassCheckBoxRP_CheckedChanged);
-            // 
-            // UpdateBtnRP
-            // 
-            this.UpdateBtnRP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(73)))), ((int)(((byte)(96)))));
-            this.UpdateBtnRP.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.UpdateBtnRP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UpdateBtnRP.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateBtnRP.ForeColor = System.Drawing.Color.White;
-            this.UpdateBtnRP.Location = new System.Drawing.Point(58, 219);
-            this.UpdateBtnRP.Margin = new System.Windows.Forms.Padding(2);
-            this.UpdateBtnRP.Name = "UpdateBtnRP";
-            this.UpdateBtnRP.Size = new System.Drawing.Size(86, 34);
-            this.UpdateBtnRP.TabIndex = 10;
-            this.UpdateBtnRP.Text = "Update";
-            this.UpdateBtnRP.UseVisualStyleBackColor = false;
-            this.UpdateBtnRP.Click += new System.EventHandler(this.UpdateBtnRP_Click);
-            // 
-            // NewPassTxtBoxRP
-            // 
-            this.NewPassTxtBoxRP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NewPassTxtBoxRP.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewPassTxtBoxRP.Location = new System.Drawing.Point(77, 63);
-            this.NewPassTxtBoxRP.Margin = new System.Windows.Forms.Padding(2);
-            this.NewPassTxtBoxRP.Multiline = true;
-            this.NewPassTxtBoxRP.Name = "NewPassTxtBoxRP";
-            this.NewPassTxtBoxRP.PasswordChar = '*';
-            this.NewPassTxtBoxRP.Size = new System.Drawing.Size(171, 27);
-            this.NewPassTxtBoxRP.TabIndex = 9;
-            // 
-            // ConPassTxtBoxRP
-            // 
-            this.ConPassTxtBoxRP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ConPassTxtBoxRP.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConPassTxtBoxRP.Location = new System.Drawing.Point(77, 148);
-            this.ConPassTxtBoxRP.Margin = new System.Windows.Forms.Padding(2);
-            this.ConPassTxtBoxRP.Multiline = true;
-            this.ConPassTxtBoxRP.Name = "ConPassTxtBoxRP";
-            this.ConPassTxtBoxRP.PasswordChar = '*';
-            this.ConPassTxtBoxRP.Size = new System.Drawing.Size(171, 27);
-            this.ConPassTxtBoxRP.TabIndex = 8;
-            // 
-            // NewPassConfirmLblRP
-            // 
-            this.NewPassConfirmLblRP.AutoSize = true;
-            this.NewPassConfirmLblRP.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewPassConfirmLblRP.Location = new System.Drawing.Point(54, 125);
-            this.NewPassConfirmLblRP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.NewPassConfirmLblRP.Name = "NewPassConfirmLblRP";
-            this.NewPassConfirmLblRP.Size = new System.Drawing.Size(208, 19);
-            this.NewPassConfirmLblRP.TabIndex = 7;
-            this.NewPassConfirmLblRP.Text = "Confirm New Password";
-            // 
-            // NewPasswordLblRP
-            // 
-            this.NewPasswordLblRP.AutoSize = true;
-            this.NewPasswordLblRP.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewPasswordLblRP.Location = new System.Drawing.Point(54, 37);
-            this.NewPasswordLblRP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.NewPasswordLblRP.Name = "NewPasswordLblRP";
-            this.NewPasswordLblRP.Size = new System.Drawing.Size(142, 19);
-            this.NewPasswordLblRP.TabIndex = 6;
-            this.NewPasswordLblRP.Text = "Enter Password";
-            // 
-            // BackBtnRP
-            // 
-            this.BackBtnRP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(73)))), ((int)(((byte)(96)))));
-            this.BackBtnRP.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BackBtnRP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BackBtnRP.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackBtnRP.ForeColor = System.Drawing.Color.White;
-            this.BackBtnRP.Location = new System.Drawing.Point(166, 219);
-            this.BackBtnRP.Margin = new System.Windows.Forms.Padding(2);
-            this.BackBtnRP.Name = "BackBtnRP";
-            this.BackBtnRP.Size = new System.Drawing.Size(86, 33);
-            this.BackBtnRP.TabIndex = 5;
-            this.BackBtnRP.Text = "Back";
-            this.BackBtnRP.UseVisualStyleBackColor = false;
-            this.BackBtnRP.Click += new System.EventHandler(this.BackBtnRP_Click);
             // 
             // OpenBtnPR1
             // 
             this.OpenBtnPR1.ErrorImage = global::Activity1V2.Properties.Resources.ClosePassword;
             this.OpenBtnPR1.Image = global::Activity1V2.Properties.Resources.ShowPassword;
-            this.OpenBtnPR1.Location = new System.Drawing.Point(249, 63);
+            this.OpenBtnPR1.Location = new System.Drawing.Point(332, 78);
+            this.OpenBtnPR1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.OpenBtnPR1.Name = "OpenBtnPR1";
-            this.OpenBtnPR1.Size = new System.Drawing.Size(30, 27);
+            this.OpenBtnPR1.Size = new System.Drawing.Size(40, 33);
             this.OpenBtnPR1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.OpenBtnPR1.TabIndex = 14;
             this.OpenBtnPR1.TabStop = false;
@@ -761,9 +716,10 @@
             // 
             this.CloseBtnPR1.ErrorImage = global::Activity1V2.Properties.Resources.ClosePassword;
             this.CloseBtnPR1.Image = global::Activity1V2.Properties.Resources.ClosePassword;
-            this.CloseBtnPR1.Location = new System.Drawing.Point(249, 63);
+            this.CloseBtnPR1.Location = new System.Drawing.Point(332, 78);
+            this.CloseBtnPR1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CloseBtnPR1.Name = "CloseBtnPR1";
-            this.CloseBtnPR1.Size = new System.Drawing.Size(30, 27);
+            this.CloseBtnPR1.Size = new System.Drawing.Size(40, 33);
             this.CloseBtnPR1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.CloseBtnPR1.TabIndex = 13;
             this.CloseBtnPR1.TabStop = false;
@@ -773,9 +729,10 @@
             // 
             this.OpenBtnPR2.ErrorImage = global::Activity1V2.Properties.Resources.ClosePassword;
             this.OpenBtnPR2.Image = global::Activity1V2.Properties.Resources.ShowPassword;
-            this.OpenBtnPR2.Location = new System.Drawing.Point(249, 147);
+            this.OpenBtnPR2.Location = new System.Drawing.Point(332, 181);
+            this.OpenBtnPR2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.OpenBtnPR2.Name = "OpenBtnPR2";
-            this.OpenBtnPR2.Size = new System.Drawing.Size(30, 27);
+            this.OpenBtnPR2.Size = new System.Drawing.Size(40, 33);
             this.OpenBtnPR2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.OpenBtnPR2.TabIndex = 12;
             this.OpenBtnPR2.TabStop = false;
@@ -786,87 +743,113 @@
             // 
             this.CloseBtnPR2.ErrorImage = global::Activity1V2.Properties.Resources.ClosePassword;
             this.CloseBtnPR2.Image = global::Activity1V2.Properties.Resources.ClosePassword;
-            this.CloseBtnPR2.Location = new System.Drawing.Point(249, 147);
+            this.CloseBtnPR2.Location = new System.Drawing.Point(332, 181);
+            this.CloseBtnPR2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CloseBtnPR2.Name = "CloseBtnPR2";
-            this.CloseBtnPR2.Size = new System.Drawing.Size(30, 27);
+            this.CloseBtnPR2.Size = new System.Drawing.Size(40, 33);
             this.CloseBtnPR2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.CloseBtnPR2.TabIndex = 11;
             this.CloseBtnPR2.TabStop = false;
             this.CloseBtnPR2.Click += new System.EventHandler(this.CloseBtnPR2_Click);
+            // 
+            // UpdateBtnRP
+            // 
+            this.UpdateBtnRP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(73)))), ((int)(((byte)(96)))));
+            this.UpdateBtnRP.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.UpdateBtnRP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UpdateBtnRP.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateBtnRP.ForeColor = System.Drawing.Color.White;
+            this.UpdateBtnRP.Location = new System.Drawing.Point(77, 270);
+            this.UpdateBtnRP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UpdateBtnRP.Name = "UpdateBtnRP";
+            this.UpdateBtnRP.Size = new System.Drawing.Size(115, 42);
+            this.UpdateBtnRP.TabIndex = 10;
+            this.UpdateBtnRP.Text = "Update";
+            this.UpdateBtnRP.UseVisualStyleBackColor = false;
+            this.UpdateBtnRP.Click += new System.EventHandler(this.UpdateBtnRP_Click);
+            // 
+            // NewPassTxtBoxRP
+            // 
+            this.NewPassTxtBoxRP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NewPassTxtBoxRP.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewPassTxtBoxRP.Location = new System.Drawing.Point(103, 78);
+            this.NewPassTxtBoxRP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.NewPassTxtBoxRP.Multiline = true;
+            this.NewPassTxtBoxRP.Name = "NewPassTxtBoxRP";
+            this.NewPassTxtBoxRP.PasswordChar = '*';
+            this.NewPassTxtBoxRP.Size = new System.Drawing.Size(227, 33);
+            this.NewPassTxtBoxRP.TabIndex = 9;
+            // 
+            // ConPassTxtBoxRP
+            // 
+            this.ConPassTxtBoxRP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ConPassTxtBoxRP.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConPassTxtBoxRP.Location = new System.Drawing.Point(103, 182);
+            this.ConPassTxtBoxRP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ConPassTxtBoxRP.Multiline = true;
+            this.ConPassTxtBoxRP.Name = "ConPassTxtBoxRP";
+            this.ConPassTxtBoxRP.PasswordChar = '*';
+            this.ConPassTxtBoxRP.Size = new System.Drawing.Size(227, 33);
+            this.ConPassTxtBoxRP.TabIndex = 8;
+            // 
+            // NewPassConfirmLblRP
+            // 
+            this.NewPassConfirmLblRP.AutoSize = true;
+            this.NewPassConfirmLblRP.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewPassConfirmLblRP.Location = new System.Drawing.Point(72, 154);
+            this.NewPassConfirmLblRP.Name = "NewPassConfirmLblRP";
+            this.NewPassConfirmLblRP.Size = new System.Drawing.Size(261, 24);
+            this.NewPassConfirmLblRP.TabIndex = 7;
+            this.NewPassConfirmLblRP.Text = "Confirm New Password";
+            // 
+            // NewPasswordLblRP
+            // 
+            this.NewPasswordLblRP.AutoSize = true;
+            this.NewPasswordLblRP.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewPasswordLblRP.Location = new System.Drawing.Point(72, 46);
+            this.NewPasswordLblRP.Name = "NewPasswordLblRP";
+            this.NewPasswordLblRP.Size = new System.Drawing.Size(179, 24);
+            this.NewPasswordLblRP.TabIndex = 6;
+            this.NewPasswordLblRP.Text = "Enter Password";
+            // 
+            // BackBtnRP
+            // 
+            this.BackBtnRP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(73)))), ((int)(((byte)(96)))));
+            this.BackBtnRP.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BackBtnRP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackBtnRP.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackBtnRP.ForeColor = System.Drawing.Color.White;
+            this.BackBtnRP.Location = new System.Drawing.Point(221, 270);
+            this.BackBtnRP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BackBtnRP.Name = "BackBtnRP";
+            this.BackBtnRP.Size = new System.Drawing.Size(115, 41);
+            this.BackBtnRP.TabIndex = 5;
+            this.BackBtnRP.Text = "Back";
+            this.BackBtnRP.UseVisualStyleBackColor = false;
+            this.BackBtnRP.Click += new System.EventHandler(this.BackBtnRP_Click);
             // 
             // ForgotPassPanelPic
             // 
             this.ForgotPassPanelPic.BackgroundImage = global::Activity1V2.Properties.Resources.TUBA_OuterSpace;
             this.ForgotPassPanelPic.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ForgotPassPanelPic.Location = new System.Drawing.Point(0, 0);
-            this.ForgotPassPanelPic.Margin = new System.Windows.Forms.Padding(2);
+            this.ForgotPassPanelPic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ForgotPassPanelPic.Name = "ForgotPassPanelPic";
-            this.ForgotPassPanelPic.Size = new System.Drawing.Size(908, 453);
+            this.ForgotPassPanelPic.Size = new System.Drawing.Size(1211, 558);
             this.ForgotPassPanelPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ForgotPassPanelPic.TabIndex = 0;
             this.ForgotPassPanelPic.TabStop = false;
             // 
-            // CreatePanelPic
-            // 
-            this.CreatePanelPic.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CreatePanelPic.Image = global::Activity1V2.Properties.Resources.Create_Forms_Background;
-            this.CreatePanelPic.Location = new System.Drawing.Point(0, 0);
-            this.CreatePanelPic.Margin = new System.Windows.Forms.Padding(2);
-            this.CreatePanelPic.Name = "CreatePanelPic";
-            this.CreatePanelPic.Size = new System.Drawing.Size(908, 453);
-            this.CreatePanelPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.CreatePanelPic.TabIndex = 0;
-            this.CreatePanelPic.TabStop = false;
-            // 
-            // CloseBtn
-            // 
-            this.CloseBtn.ErrorImage = global::Activity1V2.Properties.Resources.ClosePassword;
-            this.CloseBtn.Image = global::Activity1V2.Properties.Resources.ClosePassword;
-            this.CloseBtn.Location = new System.Drawing.Point(379, 117);
-            this.CloseBtn.Name = "CloseBtn";
-            this.CloseBtn.Size = new System.Drawing.Size(30, 25);
-            this.CloseBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.CloseBtn.TabIndex = 10;
-            this.CloseBtn.TabStop = false;
-            this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
-            // 
-            // ShowBtn
-            // 
-            this.ShowBtn.ErrorImage = global::Activity1V2.Properties.Resources.ClosePassword;
-            this.ShowBtn.Image = global::Activity1V2.Properties.Resources.ShowPassword;
-            this.ShowBtn.Location = new System.Drawing.Point(379, 117);
-            this.ShowBtn.Name = "ShowBtn";
-            this.ShowBtn.Size = new System.Drawing.Size(30, 25);
-            this.ShowBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ShowBtn.TabIndex = 11;
-            this.ShowBtn.TabStop = false;
-            this.ShowBtn.Visible = false;
-            this.ShowBtn.Click += new System.EventHandler(this.ShowBtn_Click);
-            // 
-            // LoginPanelPic
-            // 
-            this.LoginPanelPic.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LoginPanelPic.Image = global::Activity1V2.Properties.Resources.TUBA_OuterSpace;
-            this.LoginPanelPic.Location = new System.Drawing.Point(0, 0);
-            this.LoginPanelPic.Margin = new System.Windows.Forms.Padding(2);
-            this.LoginPanelPic.Name = "LoginPanelPic";
-            this.LoginPanelPic.Size = new System.Drawing.Size(908, 453);
-            this.LoginPanelPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.LoginPanelPic.TabIndex = 0;
-            this.LoginPanelPic.TabStop = false;
-            this.LoginPanelPic.Click += new System.EventHandler(this.LoginPanelPic_Click);
-            // 
-
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(908, 453);
+            this.ClientSize = new System.Drawing.Size(1211, 558);
             this.Controls.Add(this.ForgotPassPanel);
             this.Controls.Add(this.CreateAccPanel);
             this.Controls.Add(this.LoginPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Moonbase Login";
@@ -876,8 +859,12 @@
             this.LoginPanelContainer.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ShowBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoginPanelPic)).EndInit();
             this.CreateAccPanel.ResumeLayout(false);
             this.CreateAccPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CreatePanelPic)).EndInit();
             this.ForgotPassPanel.ResumeLayout(false);
             this.RecoveryPanel.ResumeLayout(false);
             this.PassRecoPanel.ResumeLayout(false);
@@ -890,10 +877,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.OpenBtnPR2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseBtnPR2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ForgotPassPanelPic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CreatePanelPic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ShowBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LoginPanelPic)).EndInit();
             this.ResumeLayout(false);
 
         }

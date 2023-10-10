@@ -57,21 +57,28 @@ namespace Activity1V2
             dataGridView1.Columns["Email"].Resizable = DataGridViewTriState.False;
             dataGridView1.Columns["Status"].Resizable = DataGridViewTriState.False;
 
+            dataGridView1.ClearSelection();
+            dataGridView1.KeyDown += dataGridView1_KeyDown;
+            ActivateBtn.MouseEnter += Button_MouseEnter;
+            ActivateBtn.MouseLeave += Button_MouseLeave;
+            DeactivateBtn.MouseEnter += Button_MouseEnter;
+            DeactivateBtn.MouseLeave += Button_MouseLeave;
+            DeleteBtn.MouseEnter += Button_MouseEnter;
+            DeleteBtn.MouseLeave += Button_MouseLeave;
+            BackBtn.MouseEnter += Button_MouseEnter;
+            BackBtn.MouseLeave += Button_MouseLeave;
+
         }
 
         private void SearchTxtBox_TextChanged(object sender, EventArgs e)
         {
             string searchText = SearchTxtBox.Text.Trim();
 
-            if (!searchText.Equals("Type to search"))
+            if (!searchText.Equals("Type here to search"))
             {
                 DataTable filteredTable = FilterTable(searchText);
                 dataGridView1.DataSource = filteredTable;
             }
-
-            /*string searchText = SearchTxtBox.Text.Trim();
-            DataTable filteredTable = FilterTable(searchText);
-            dataGridView1.DataSource = filteredTable;*/
         }
 
         private DataTable FilterTable(string searchText)
@@ -249,9 +256,10 @@ namespace Activity1V2
 
         private void SearchTxtBox_Enter(object sender, EventArgs e)
         {
-            if(SearchTxtBox.Text.Equals("Type to search"))
+            if (SearchTxtBox.Text.Equals("Type here to search"))
             {
                 SearchTxtBox.Text = null;
+                SearchTxtBox.ForeColor = Color.Black;
             }
         }
 
@@ -259,8 +267,27 @@ namespace Activity1V2
         {
             if (string.IsNullOrEmpty(SearchTxtBox.Text))
             {
-                SearchTxtBox.Text = "Type to search";
+                SearchTxtBox.Text = "Type here to search";
+                SearchTxtBox.ForeColor = Color.LightGray;
             }
+        }
+
+        private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                dataGridView1.ClearSelection();
+            }
+        }
+
+        private void Button_MouseEnter(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Hand;
+        }
+
+        private void Button_MouseLeave(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Default;
         }
     }
 }

@@ -61,10 +61,17 @@ namespace Activity1V2
 
         private void SearchTxtBox_TextChanged(object sender, EventArgs e)
         {
-
             string searchText = SearchTxtBox.Text.Trim();
+
+            if (!searchText.Equals("Type to search"))
+            {
+                DataTable filteredTable = FilterTable(searchText);
+                dataGridView1.DataSource = filteredTable;
+            }
+
+            /*string searchText = SearchTxtBox.Text.Trim();
             DataTable filteredTable = FilterTable(searchText);
-            dataGridView1.DataSource = filteredTable;
+            dataGridView1.DataSource = filteredTable;*/
         }
 
         private DataTable FilterTable(string searchText)
@@ -240,6 +247,20 @@ namespace Activity1V2
 
         }
 
-        
+        private void SearchTxtBox_Enter(object sender, EventArgs e)
+        {
+            if(SearchTxtBox.Text.Equals("Type to search"))
+            {
+                SearchTxtBox.Text = null;
+            }
+        }
+
+        private void SearchTxtBox_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(SearchTxtBox.Text))
+            {
+                SearchTxtBox.Text = "Type to search";
+            }
+        }
     }
 }

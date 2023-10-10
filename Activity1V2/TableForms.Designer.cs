@@ -60,13 +60,17 @@
             // SearchTxtBox
             // 
             this.SearchTxtBox.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchTxtBox.ForeColor = System.Drawing.Color.Gray;
             this.SearchTxtBox.Location = new System.Drawing.Point(308, 84);
             this.SearchTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SearchTxtBox.Multiline = true;
             this.SearchTxtBox.Name = "SearchTxtBox";
             this.SearchTxtBox.Size = new System.Drawing.Size(615, 34);
             this.SearchTxtBox.TabIndex = 2;
+            this.SearchTxtBox.Text = "Type to search";
             this.SearchTxtBox.TextChanged += new System.EventHandler(this.SearchTxtBox_TextChanged);
+            this.SearchTxtBox.Enter += new System.EventHandler(this.SearchTxtBox_Enter);
+            this.SearchTxtBox.Leave += new System.EventHandler(this.SearchTxtBox_Leave);
             // 
             // ActivateBtn
             // 
@@ -127,7 +131,7 @@
             this.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackBtn.Font = new System.Drawing.Font("Nasalization Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackBtn.ForeColor = System.Drawing.Color.White;
-            this.BackBtn.Location = new System.Drawing.Point(1008, 505);
+            this.BackBtn.Location = new System.Drawing.Point(1008, 504);
             this.BackBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BackBtn.Name = "BackBtn";
             this.BackBtn.Size = new System.Drawing.Size(180, 46);
@@ -154,7 +158,7 @@
             // 
             this.SearchIcon.Image = global::Activity1V2.Properties.Resources.SearchIcon;
             this.SearchIcon.Location = new System.Drawing.Point(925, 84);
-            this.SearchIcon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SearchIcon.Margin = new System.Windows.Forms.Padding(4);
             this.SearchIcon.Name = "SearchIcon";
             this.SearchIcon.Size = new System.Drawing.Size(49, 34);
             this.SearchIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

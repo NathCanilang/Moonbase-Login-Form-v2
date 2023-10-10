@@ -608,16 +608,6 @@ namespace Activity1V2
             }
         }
 
-        private void ShowPassCheckBoxRP_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ShowPassCheckBoxRP2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void TextBoxCleaner()
         {
             UsernameTxtBoxPR.Clear();

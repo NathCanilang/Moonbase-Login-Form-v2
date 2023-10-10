@@ -46,9 +46,12 @@ namespace Activity1V2
             CreateAccPanel.Hide();
 
             //LoginPanel essentials
-            loginBtnTimer = new System.Windows.Forms.Timer();
-            loginBtnTimer.Interval = 10000;
+            loginBtnTimer = new Timer
+            {
+                Interval = 10000
+            };
             loginBtnTimer.Tick += LoginBtnTimer_Tick;
+            this.AcceptButton = LoginBtn;
 
             //CreatePanel essentials
             GenderComBox.Items.AddRange(genders);
@@ -90,7 +93,7 @@ namespace Activity1V2
             string passwordInput = PasswordEncrypter.hashPassword(PasswordTxtBox.Text);
             bool accountActive = false;
 
-            string selectQuery = $"SELECT HashedPassword, Status FROM mbuserinfo WHERE Username = '{usernameInput}'";
+            string selectQuery = $"SELECT Username, HashedPassword, Status FROM mbuserinfo WHERE Username = '{usernameInput}'";
             MySqlCommand cmdDataBase = new MySqlCommand(selectQuery, conn);
             MySqlDataReader myReader;
 
@@ -134,20 +137,27 @@ namespace Activity1V2
                 {
 
                     conn.Open();
-                    string selectPassword = $"SELECT Username FROM mbuserinfo WHERE HashedPassword = '{passwordInput}'";
+                    string selectPassword = $"SELECT Username, HashedPassword, Status FROM mbuserinfo WHERE HashedPassword = '{passwordInput}'";
                     MySqlCommand cmdDataBase1 = new MySqlCommand(selectPassword, conn);
                     MySqlDataReader myReader1;
                     myReader1 = cmdDataBase1.ExecuteReader();
                     if (myReader1.Read())
                     {
                         string databaseUsername = myReader1["Username"].ToString();
+                        string databasePassword = myReader1["HashedPassword"].ToString();
+                        string accountStatus = myReader1["Status"].ToString();
+                        if (accountStatus == "ACTIVATED")
+                        {
+                            accountActive = true;
+                        }
 
-                        if (databaseUsername != usernameInput)
+                        if (usernameInput != databaseUsername && passwordInput == databasePassword && accountActive)
                         {
                             MessageBox.Show($"Invalid Username", "Try Again", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                            ErrorAttempts();
                             return;
                         }
+                        
                     }
                 }
                 catch (Exception)
@@ -163,6 +173,7 @@ namespace Activity1V2
                 myReader = cmdDataBase.ExecuteReader();
                 if (myReader.Read())
                 {
+                    string databaseUsername = myReader["Username"].ToString();
                     string databasePassword = myReader["HashedPassword"].ToString();
                     string accountStatus = myReader["Status"].ToString();
 
@@ -171,18 +182,21 @@ namespace Activity1V2
                         accountActive = true;
                     }
 
-                    if (!accountActive)
+                    if (passwordInput == databasePassword && usernameInput == databaseUsername && !accountActive)
                     {
                         MessageBox.Show("Wait for the admin to approve your account", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        UsernameComBox.ResetText();
+                        PasswordTxtBox.Clear();
                     }
                     else
                     {
-                        if (passwordInput != databasePassword)
+                        if (usernameInput == databaseUsername && passwordInput != databasePassword && accountActive)
                         {
                             MessageBox.Show($"Invalid Password", "Try Again", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             ErrorAttempts();
+                            PasswordTxtBox.Clear();
                         }
-                        else
+                        else if (passwordInput == databasePassword && accountActive && usernameInput == databaseUsername)
                         {
                             MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             RememberAccount();
@@ -192,8 +206,14 @@ namespace Activity1V2
                             loginAttempts = 0;
                             UsernameComBox.ResetText();
                             PasswordTxtBox.Clear();
-
                             currentAttempts = 3;
+                        }
+                        else
+                        {
+                            MessageBox.Show($"Invalid Credentials", "Try Again", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            ErrorAttempts();
+                            UsernameComBox.ResetText();
+                            PasswordTxtBox.Clear();
                         }
                     }
                 }
@@ -201,6 +221,8 @@ namespace Activity1V2
                 {
                     MessageBox.Show($"Invalid Credentials", "Try Again", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     ErrorAttempts();
+                    UsernameComBox.ResetText();
+                    PasswordTxtBox.Clear();
 
                 }
             }
@@ -214,6 +236,7 @@ namespace Activity1V2
             {
                 conn.Close();
             }
+          
         }
 
         public void ErrorAttempts()
@@ -281,6 +304,15 @@ namespace Activity1V2
                 UsernameComBox.Items.Add(newItem);
                 UsernameComBox.SelectedIndex = UsernameComBox.Items.IndexOf(newItem);
                 UsernameComBox.Text = "";
+            }
+        }
+
+        private void PasswordTxtBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = true;
+                LoginBtn_Click(sender, e); // Call the login button click event
             }
         }
 
@@ -434,6 +466,35 @@ namespace Activity1V2
             ResetPanel.Visible = false;
             passwordRecoPanelOriginalLocation = RecoveryPanel.Location;
             resetPassPanelOriginalLocation = ResetPanel.Location;
+
+            LoginBtn.MouseEnter += Button_MouseEnter;
+            LoginBtn.MouseLeave += Button_MouseLeave;
+            VerifyBtn.MouseEnter += Button_MouseEnter;
+            VerifyBtn.MouseLeave += Button_MouseLeave;
+            BackBtnPR.MouseEnter += Button_MouseEnter;
+            BackBtnPR.MouseLeave += Button_MouseLeave;
+            CreateAccBtn.MouseEnter += Button_MouseEnter;
+            CreateAccBtn.MouseLeave += Button_MouseLeave;
+            CancelBtn.MouseEnter += Button_MouseEnter;
+            CancelBtn.MouseLeave += Button_MouseLeave;
+            UpdateBtnRP.MouseEnter += Button_MouseEnter;
+            UpdateBtnRP.MouseLeave += Button_MouseLeave;
+            BackBtnRP.MouseEnter += Button_MouseEnter;
+            BackBtnRP.MouseLeave += Button_MouseLeave;
+            ShowBtn.MouseEnter += Button_MouseEnter;
+            ShowBtn.MouseLeave += Button_MouseLeave;
+            CloseBtn.MouseEnter += Button_MouseEnter;
+            CloseBtn.MouseLeave += Button_MouseLeave;
+            OpenBtnPR1.MouseEnter += Button_MouseEnter;
+            OpenBtnPR1.MouseLeave += Button_MouseLeave;
+            CloseBtnPR1.MouseEnter += Button_MouseEnter;
+            CloseBtnPR1.MouseLeave += Button_MouseLeave;
+            OpenBtnPR2.MouseEnter += Button_MouseEnter;
+            OpenBtnPR2.MouseLeave += Button_MouseLeave;
+            CloseBtnPR2.MouseEnter += Button_MouseEnter;
+            CloseBtnPR2.MouseLeave += Button_MouseLeave;
+
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -458,7 +519,7 @@ namespace Activity1V2
         private void VerifyBtn_Click(object sender, EventArgs e)
         {
             string enteredUsername = UsernameTxtBoxPR.Text;
-            string enteredEmail = EmailLblPR.Text;
+            string enteredEmail = EmailTxtBoxPR.Text;
 
             if (string.IsNullOrWhiteSpace(enteredUsername) || string.IsNullOrWhiteSpace(enteredEmail))
             {
@@ -472,10 +533,11 @@ namespace Activity1V2
                     try
                     {
                         conn.Open();
-                        string checkUserEmailQuery = "SELECT Email FROM mbuserinfo WHERE Username = @Username AND Status = 'ACTIVATED'";
+                        string checkUserEmailQuery = "SELECT Username, Email FROM mbuserinfo WHERE Username = @Username AND Email = @Email AND Status = 'ACTIVATED'";
                         using (MySqlCommand checkUserEmailCommand = new MySqlCommand(checkUserEmailQuery, conn))
                         {
                             checkUserEmailCommand.Parameters.AddWithValue("@Username", enteredUsername);
+                            checkUserEmailCommand.Parameters.AddWithValue("@Email", enteredEmail);
 
                             object result = checkUserEmailCommand.ExecuteScalar();
 
@@ -483,9 +545,7 @@ namespace Activity1V2
                             {
                                 MessageBox.Show("You can now proceed with resetting your password.", "Congratulations!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                                UsernameTxtBoxPR.Clear();
-                                EmailTxtBoxPR.Clear();
-
+                                
                                 timer1.Start();
                                 ResetPanel.Visible = true;
 
@@ -513,6 +573,97 @@ namespace Activity1V2
                 }
             }
         }
+        private void UpdateBtnRP_Click(object sender, EventArgs e)
+        {
+            string enteredUsername = UsernameTxtBoxPR.Text;
+            string enteredEmail = EmailTxtBoxPR.Text;
+            string newPassword = NewPassTxtBoxRP.Text;
+            string confirmedPassword = ConPassTxtBoxRP.Text;
+            string fixedSalt = "xCv12dFqwS";
+            string randomSalt = PasswordEncrypter.generateSalt();
+
+            if (string.IsNullOrWhiteSpace(newPassword) || string.IsNullOrWhiteSpace(confirmedPassword))
+            {
+                MessageBox.Show("Please enter and confirm the new password.", "TRY AGAIN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (newPassword != confirmedPassword)
+            {
+                MessageBox.Show("Passwords do not match.", "TRY AGAIN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            using (conn)
+            {
+                try
+                {
+                    conn.Open();
+                    string checkUserEmailQuery = "SELECT Username, Email FROM mbuserinfo WHERE Username = @Username AND Email = @Email AND Status = 'ACTIVATED'";
+                    using (MySqlCommand checkUserEmailCommand = new MySqlCommand(checkUserEmailQuery, conn))
+                    {
+                        checkUserEmailCommand.Parameters.AddWithValue("@Username", enteredUsername);
+                        checkUserEmailCommand.Parameters.AddWithValue("@Email", enteredEmail);
+
+                        object result = checkUserEmailCommand.ExecuteScalar();
+
+                        if (result != null)
+                        {
+                            // User found and account is activated
+                            string hashedNewPassword = PasswordEncrypter.hashPassword(newPassword);
+                            string fixedSaltedPassword = PasswordEncrypter.fixedSaltPassword(newPassword, fixedSalt);
+                            string randomAsin = randomSalt;
+                            string randomSaltedPassword = PasswordEncrypter.randomSaltPassword(newPassword, randomSalt);
+
+                            string updatePasswordQuery = "UPDATE mbuserinfo SET HashedPassword = @HashedPassword, FixedSaltedPassword = @FixedSaltedPassword, RandomString = @RandomString, RandomSaltedPassword = @RandomSaltedPassword  WHERE Username = @Username AND Email = @Email";
+                            using (MySqlCommand cmd = new MySqlCommand(updatePasswordQuery, conn))
+                            {
+                                cmd.Parameters.AddWithValue("@HashedPassword", hashedNewPassword);
+                                cmd.Parameters.AddWithValue("@FixedSaltedPassword", fixedSaltedPassword);
+                                cmd.Parameters.AddWithValue("@RandomString", randomAsin);
+                                cmd.Parameters.AddWithValue("@RandomSaltedPassword", randomSaltedPassword);
+
+                                cmd.Parameters.AddWithValue("@Username", enteredUsername);
+                                cmd.Parameters.AddWithValue("@Email", enteredEmail);
+
+                                int rowsAffected = cmd.ExecuteNonQuery();
+
+                                if (rowsAffected > 0)
+                                {
+                                    MessageBox.Show("Password updated successfully.", "Password Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                    LoginPanel.Show();
+                                    ForgotPassPanel.Hide();
+                                    CreateAccPanel.Hide();
+                                    TextBoxCleaner();
+
+                                    RecoveryPanel.Location = passwordRecoPanelOriginalLocation;
+                                    ResetPanel.Location = resetPassPanelOriginalLocation;
+                                    ResetPanel.Visible = false;
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Password update failed. No rows were updated in the database.", "TRY AGAIN", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("User not found or account is not activated.", "TRY AGAIN", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show("Database error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+        }
+
 
         private void BackBtnRP_Click(object sender, EventArgs e)
         {
@@ -526,87 +677,7 @@ namespace Activity1V2
             ResetPanel.Visible = false;
         }
 
-        private void UpdateBtnRP_Click(object sender, EventArgs e)
-        {
-            string enteredNewPassword = NewPassTxtBoxRP.Text;
-            string newConfirmedPassword = ConPassTxtBoxRP.Text;
-            string fixedSalt = "xCv12dFqwS";
-            string randomSalt = PasswordEncrypter.generateSalt();
 
-            if (string.IsNullOrWhiteSpace(enteredNewPassword) || string.IsNullOrWhiteSpace(newConfirmedPassword))
-            {
-                MessageBox.Show("Please fill in all required fields.", "TRY AGAIN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            else if ((enteredNewPassword != newConfirmedPassword))
-            {
-                MessageBox.Show("Passwords do not match.", "TRY AGAIN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            else
-            {
-                string enteredUsername = UsernameTxtBoxPR.Text;
-                string enteredEmail = EmailTxtBoxPR.Text;
-                string newPassword = NewPassTxtBoxRP.Text;
-
-                string connectionString = "server=localhost;user=root;database=moonbasedatabase;password=";
-
-                using (MySqlConnection connection = new MySqlConnection(connectionString))
-                {
-                    try
-                    {
-                        connection.Open();
-
-                        string updatePasswordQuery = "UPDATE mbuserinfo SET HashedPassword = @HashedPassword, FixedSaltedPassword = @FixedSaltedPassword, RandomString = @RandomString, RandomSaltedPassword = @RandomSaltedPassword WHERE Username = @Username AND Email = @Email";
-
-                        MySqlCommand cmd = new MySqlCommand(updatePasswordQuery, connection);
-                        string hashedNewPassword = PasswordEncrypter.hashPassword(newPassword);
-                        cmd.Parameters.AddWithValue("@HashedPassword", hashedNewPassword);
-
-                        string fixedSaltedPassword = PasswordEncrypter.fixedSaltPassword(newPassword, fixedSalt);
-                        cmd.Parameters.AddWithValue("@FixedSaltedPassword", fixedSaltedPassword);
-
-
-                        string randomAsin = randomSalt;
-                        cmd.Parameters.AddWithValue("@RandomString", randomAsin);
-
-                        string randomSaltedPassword = PasswordEncrypter.randomSaltPassword(newPassword, randomSalt);
-                        cmd.Parameters.AddWithValue("@RandomSaltedPassword", randomSaltedPassword);
-
-                        cmd.Parameters.AddWithValue("@Username", enteredUsername);
-                        cmd.Parameters.AddWithValue("@Email", enteredEmail);
-
-                        int rowsAffected = cmd.ExecuteNonQuery();
-
-                        if (rowsAffected > 0)
-                        {
-                            DialogResult confirmationResult = MessageBox.Show("Your password has been successfully reset.", "PASSWORD RESET", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                            LoginPanel.Show();
-                            ForgotPassPanel.Hide();
-                            CreateAccPanel.Hide();
-                            TextBoxCleaner();
-
-                            RecoveryPanel.Location = passwordRecoPanelOriginalLocation;
-                            ResetPanel.Location = resetPassPanelOriginalLocation;
-                            ResetPanel.Visible = false;
-                        }
-                        else
-                        {
-                            MessageBox.Show("Password reset failed.", "TRY AGAIN", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    finally
-                    {
-                        connection.Close();
-                    }
-                }
-            }
-        }
 
         private void TextBoxCleaner()
         {
@@ -663,6 +734,16 @@ namespace Activity1V2
                 CloseBtnPR2.Visible = false;
                 ConPassTxtBoxRP.PasswordChar = '\0'; // Show password
             }
+        }
+
+        private void Button_MouseEnter(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Hand;
+        }
+
+        private void Button_MouseLeave(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Default;
         }
     }
 }

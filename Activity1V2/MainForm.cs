@@ -2,7 +2,6 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using System.Xml;
 
 namespace Activity1V2
 {
@@ -20,7 +19,6 @@ namespace Activity1V2
         public int currentAttempts = 3;
         private bool cooldownActive = false;
 
-
         //CreatePanel essentials
         private string[] genders = { "Male", "Female" };
 
@@ -30,8 +28,6 @@ namespace Activity1V2
         private Timer timer1;
         private Point passwordRecoPanelOriginalLocation;
         private Point resetPassPanelOriginalLocation;
-
-
 
         public MainForm()
         {
@@ -66,7 +62,7 @@ namespace Activity1V2
             //ForgotPassPanel essentials
             timer1 = new Timer();
             timer1.Interval = 10; // ito yung bilis ng travel, the higher the smoother
-            timer1.Tick += new EventHandler(timer1_Tick);        
+            timer1.Tick += new EventHandler(timer1_Tick);
         }
         //LoginPanel elements and methods only
         private void CreateLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -124,6 +120,7 @@ namespace Activity1V2
                 else
                 {
                     MessageBox.Show("Invalid admin password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    PasswordTxtBox.Clear();
                     return;
                 }
             }
@@ -145,7 +142,8 @@ namespace Activity1V2
                         if (databaseUsername != usernameInput)
                         {
                             MessageBox.Show($"Invalid Username", "Try Again", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                            UsernameComBox.ResetText();
+                            //PasswordTxtBox.Clear();
                             return;
                         }
                     }
@@ -174,12 +172,16 @@ namespace Activity1V2
                     if (!accountActive)
                     {
                         MessageBox.Show("Wait for the admin to approve your account", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        UsernameComBox.ResetText();
+                        PasswordTxtBox.Clear();
+                        RememberChkBox.CheckState = CheckState.Unchecked;
                     }
                     else
                     {
                         if (passwordInput != databasePassword)
                         {
                             MessageBox.Show($"Invalid Password", "Try Again", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            PasswordTxtBox.Clear();
                             ErrorAttempts();
                         }
                         else
@@ -200,6 +202,8 @@ namespace Activity1V2
                 else
                 {
                     MessageBox.Show($"Invalid Credentials", "Try Again", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    UsernameComBox.ResetText();
+                    PasswordTxtBox.Clear();
                     ErrorAttempts();
 
                 }
@@ -483,8 +487,8 @@ namespace Activity1V2
                             {
                                 MessageBox.Show("You can now proceed with resetting your password.", "Congratulations!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                                UsernameTxtBoxPR.Clear();
-                                EmailTxtBoxPR.Clear();
+                                /*UsernameTxtBoxPR.Clear();
+                                EmailTxtBoxPR.Clear();*/
 
                                 timer1.Start();
                                 ResetPanel.Visible = true;
@@ -538,7 +542,7 @@ namespace Activity1V2
                 MessageBox.Show("Please fill in all required fields.", "TRY AGAIN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            else if ((enteredNewPassword != newConfirmedPassword))
+            else if (enteredNewPassword != newConfirmedPassword)
             {
                 MessageBox.Show("Passwords do not match.", "TRY AGAIN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -594,6 +598,8 @@ namespace Activity1V2
                         else
                         {
                             MessageBox.Show("Password reset failed.", "TRY AGAIN", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            NewPassTxtBoxRP.Clear();
+                            ConPassTxtBoxRP.Clear();
                         }
                     }
                     catch (Exception ex)
@@ -618,11 +624,6 @@ namespace Activity1V2
             EmailTxtBoxPR.Enabled = true;
             VerifyBtn.Enabled = true;
             BackBtnPR.Enabled = true;
-        }
-
-        private void LoginPanelPic_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void OpenBtnPR1_Click(object sender, EventArgs e)

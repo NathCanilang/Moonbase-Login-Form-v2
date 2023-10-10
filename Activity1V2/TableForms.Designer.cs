@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TableForms));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.SearchTxtBox = new System.Windows.Forms.TextBox();
             this.ActivateBtn = new System.Windows.Forms.Button();
@@ -152,7 +153,6 @@
             this.AdminLbl.Size = new System.Drawing.Size(960, 51);
             this.AdminLbl.TabIndex = 8;
             this.AdminLbl.Text = "ADMIN CONTROL PANEL";
-            this.AdminLbl.Click += new System.EventHandler(this.AdminLbl_Click);
             // 
             // SearchIcon
             // 
@@ -190,6 +190,7 @@
             this.Controls.Add(this.SearchTxtBox);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "TableForms";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

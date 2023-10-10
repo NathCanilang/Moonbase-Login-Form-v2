@@ -47,7 +47,7 @@ namespace Activity1V2
             dataGridView1.Columns["Age"].Width = 30;
             dataGridView1.Columns["Gender"].Width = 50;
             dataGridView1.Columns["Username"].Width = 150;
-            dataGridView1.Columns["Email"].Width = 150; // Set your desired width
+            dataGridView1.Columns["Email"].Width = 150;
             dataGridView1.Columns["Status"].Width = 129;
 
             dataGridView1.Columns["FullName"].Resizable = DataGridViewTriState.False;
@@ -240,11 +240,6 @@ namespace Activity1V2
         private void BackBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-        }
-
-        private void AdminLbl_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void SearchTxtBox_Enter(object sender, EventArgs e)

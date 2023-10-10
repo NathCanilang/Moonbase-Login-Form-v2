@@ -73,6 +73,8 @@
             this.ResetPanel = new System.Windows.Forms.Panel();
             this.ResetPassLbl = new System.Windows.Forms.Label();
             this.ResetPassPanel = new System.Windows.Forms.Panel();
+            this.ShowPassCheckBoxRP2 = new System.Windows.Forms.CheckBox();
+            this.ShowPassCheckBoxRP = new System.Windows.Forms.CheckBox();
             this.UpdateBtnRP = new System.Windows.Forms.Button();
             this.NewPassTxtBoxRP = new System.Windows.Forms.TextBox();
             this.ConPassTxtBoxRP = new System.Windows.Forms.TextBox();
@@ -88,6 +90,7 @@
             this.CloseBtn = new System.Windows.Forms.PictureBox();
             this.ShowBtn = new System.Windows.Forms.PictureBox();
             this.LoginPanelPic = new System.Windows.Forms.PictureBox();
+
             ((System.ComponentModel.ISupportInitialize)(this.PanelHandler)).BeginInit();
             this.LoginPanel.SuspendLayout();
             this.LoginPanelContainer.SuspendLayout();
@@ -641,6 +644,28 @@
             this.ResetPassPanel.Size = new System.Drawing.Size(324, 295);
             this.ResetPassPanel.TabIndex = 0;
             // 
+            // ShowPassCheckBoxRP2
+            // 
+            this.ShowPassCheckBoxRP2.AutoSize = true;
+            this.ShowPassCheckBoxRP2.Location = new System.Drawing.Point(109, 221);
+            this.ShowPassCheckBoxRP2.Name = "ShowPassCheckBoxRP2";
+            this.ShowPassCheckBoxRP2.Size = new System.Drawing.Size(125, 20);
+            this.ShowPassCheckBoxRP2.TabIndex = 12;
+            this.ShowPassCheckBoxRP2.Text = "Show Password";
+            this.ShowPassCheckBoxRP2.UseVisualStyleBackColor = true;
+            this.ShowPassCheckBoxRP2.CheckedChanged += new System.EventHandler(this.ShowPassCheckBoxRP2_CheckedChanged);
+            // 
+            // ShowPassCheckBoxRP
+            // 
+            this.ShowPassCheckBoxRP.AutoSize = true;
+            this.ShowPassCheckBoxRP.Location = new System.Drawing.Point(109, 117);
+            this.ShowPassCheckBoxRP.Name = "ShowPassCheckBoxRP";
+            this.ShowPassCheckBoxRP.Size = new System.Drawing.Size(125, 20);
+            this.ShowPassCheckBoxRP.TabIndex = 11;
+            this.ShowPassCheckBoxRP.Text = "Show Password";
+            this.ShowPassCheckBoxRP.UseVisualStyleBackColor = true;
+            this.ShowPassCheckBoxRP.CheckedChanged += new System.EventHandler(this.ShowPassCheckBoxRP_CheckedChanged);
+            // 
             // UpdateBtnRP
             // 
             this.UpdateBtnRP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(73)))), ((int)(((byte)(96)))));
@@ -831,6 +856,7 @@
             this.LoginPanelPic.TabStop = false;
             this.LoginPanelPic.Click += new System.EventHandler(this.LoginPanelPic_Click);
             // 
+
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
